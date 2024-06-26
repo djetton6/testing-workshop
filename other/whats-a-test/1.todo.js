@@ -19,5 +19,16 @@ error if the subtract function were to have a bug
 */
 
 // sum is intentionally broken so you can see errors in the tests
-const sum = (a, b) => a - b
+const sum = (a, b) => a + b
 const subtract = (a, b) => a - b
+
+const result = sum(10, 6)
+const expected = 16
+
+if (result !== expected) {
+  throw new Error(`This is not right, the sum is different`)
+} else {
+  console.log("NICE, it works")
+}
+
+
