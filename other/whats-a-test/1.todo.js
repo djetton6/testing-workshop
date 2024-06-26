@@ -27,8 +27,6 @@ const expected = 16
 
 if (result !== expected) {
   throw new Error(`This is not right, the sum is different`)
-} else {
-  console.log("NICE, it works")
-}
+} 
 
 
