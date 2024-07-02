@@ -1,3 +1,6 @@
+import {initDB} from 'til-server-test-utils'
+import {getUsers} from "../users"
+
 //////// Elaboration & Feedback /////////
 // When you've finished with the exercises:
 // 1. Copy the URL below into your browser and fill out the form
@@ -12,3 +15,11 @@ test.skip('I submitted my elaboration and feedback', () => {
   expect(submitted).toBe(true)
 })
 ////////////////////////////////
+
+test('getUsers returns the correct amount of users', async () => {
+  await initDB()
+  const req = {}
+  const res = { json: jest.fn() }
+  await getUsers(req, res)
+  expect(res.json).toHaveBeenCalledTimes(1)
+})

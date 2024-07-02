@@ -12,3 +12,8 @@ test.skip('I submitted my elaboration and feedback', () => {
   expect(submitted).toBe(true)
 })
 ////////////////////////////////
+
+// test('getUsers get back the correct amount of users', () => {
+//   const submitted = false // change this when you've submitted!
+//   expect(submitted).toBe(true)
+// })
